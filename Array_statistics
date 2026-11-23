@@ -1,0 +1,26 @@
+function arrayStats(array) {
+    arrayObject = {
+        min : Math.min(...array),
+        max : Math.max(...array),
+        
+        sum : function() {
+            Sum = 0; // initiate the sum to 0
+            for (let i = 0; i < array.length; i++){ 
+                Sum += array[i];
+            }
+            return Sum;
+        },
+
+        avarage : function() {
+            avg = Sum / array.length
+            return avg;
+        },
+    };
+
+    var theObject = arrayObject;
+    var valueReturned = "{ sum: " + theObject.sum() + " avarage: " + theObject.avarage() + " min: " + theObject.min + " max: " + theObject.max + "}";
+    return valueReturned;
+}
+
+var array = [1,2,3];
+console.log(arrayStats(array));
